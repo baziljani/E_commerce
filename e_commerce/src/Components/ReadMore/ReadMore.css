@@ -1,0 +1,54 @@
+.product-detail {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Roboto Condensed', sans-serif; /* Example font */
+}
+
+.product-detail h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Anton', sans-serif; /* Example font */
+  color: #333;
+}
+
+.product-detail img {
+ width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-detail img:hover {
+  transform: scale(1.05);
+}
+
+.product-detail p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.product-detail .price {
+  font-size: 24px;
+  color: #ff0000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Bebas Neue', sans-serif; /* Example font */
+}
+
+.product-detail .button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif; /* Example font */
+  transition: background-color 0.3s ease;
+}
+
+.product-detail .button:hover {
+  background-color: #555;
+}

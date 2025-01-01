@@ -1,0 +1,37 @@
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  font-family: "Lato", serif;
+}
+
+.cart-item-image {
+  max-width: 150px;
+  height: auto;
+}
+
+.cart-item-description {
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Lato", serif;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555;
+}

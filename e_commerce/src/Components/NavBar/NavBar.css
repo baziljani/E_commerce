@@ -1,0 +1,81 @@
+.navbar {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  overflow: hidden;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575fcf;
+  color: #fff;
+}
+
+.navbar .left {
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: #ffcc00; /* Different color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a more attractive look */
+}
+
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .right span {
+  display: block;
+  padding: 14px 20px;
+  color: #f2f2f2;
+  font-size: 16px;
+}
+
+.navbar .right span:hover {
+  background-color: #575fcf;
+  color: #fff;
+}
+
+.navbar, .user.name {
+  color: #ffcc00; /* Change this color to your desired color */
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  flex-grow: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-button:hover {
+  background-color: #555;
+}
