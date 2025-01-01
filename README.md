@@ -1,9 +1,9 @@
-here using some comments 
-create the project
-npm install
-npm install react-router-dom@latest
-finally
-npm run dev
+!//here using some comments 
+!//create the project
+!//npm install
+!//npm install react-router-dom@latest
+!//finally
+!//npm run dev.....
 
 
 ![Image-1](https://github.com/user-attachments/assets/a32bd5e3-bace-4f9b-9ff1-490aeb5a1556)
