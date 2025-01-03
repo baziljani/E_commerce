@@ -1,0 +1,106 @@
+/* filepath: /e:/E_commerce/e_commerce/src/Components/Cart/Cart.scss */
+
+// Variables
+$button-bg-color: #333;
+$button-hover-bg-color: #555;
+$remove-button-bg-color: #ff0000;
+$remove-button-hover-bg-color: #cc0000;
+$buy-now-bg-color: #4CAF50;
+$font-family: "Lato", serif;
+
+// Cart items container
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+// Individual cart item
+.cart-item {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 20px;
+  font-family: $font-family;
+  align-items: center;
+  justify-content: space-between;
+
+  // Product image
+  .cart-item-image {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  // Product details
+  .cart-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+
+    .cart-item-description {
+      max-height: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #b12704;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Action buttons
+  .cart-item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .button {
+      background-color: $button-bg-color;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: $button-hover-bg-color;
+      }
+    }
+
+    .remove-button {
+      background-color: $remove-button-bg-color;
+      color: white;
+      width: auto;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: $remove-button-hover-bg-color;
+      }
+    }
+
+    .buy-now {
+      background-color: $buy-now-bg-color;
+      width: auto;
+      max-width: 200px;
+      margin: 20px auto;
+
+      &:hover {
+        background-color: darken($buy-now-bg-color, 10%);
+      }
+    }
+  }
+}

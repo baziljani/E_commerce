@@ -5,6 +5,8 @@ import './Home.css';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(10); // Number of products per page
   const { addToCart } = useContext(CartContext);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -21,11 +23,19 @@ const Home = () => {
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Get current products
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div>
       <h1>Products</h1>
       <div className="products">
-        {filteredProducts.map(product => (
+        {currentProducts.map(product => (
           <div key={product.id} className="product">
             <h2>{product.title}</h2>
             <img src={product.image} alt={product.title} className="product-image" />
@@ -36,6 +46,22 @@ const Home = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="pagination">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="pagination-button"
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={indexOfLastProduct >= filteredProducts.length}
+          className="pagination-button"
+        >
+          Next
+        </button>
       </div>
     </div>
   );

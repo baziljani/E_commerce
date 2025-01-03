@@ -1,31 +1,33 @@
-import React from 'react'
-import Home from './Components/Home/Home'
-import NavBar from './Components/NavBar/NavBar'
-import Cart from './Components/Cart/Cart'
-import ReadMore from './Components/ReadMore/ReadMore'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Components/Home/Home';
+import NavBar from './Components/NavBar/NavBar';
+import ReadMore from './Components/ReadMore/ReadMore';
+import Cart from './Components/Cart/Cart';
+import Login from './Components/Login/Login';
+import Checkout from './Components/Checkout/Checkout';
+import Footer from './Components/Footer/Footer';
 import { CartProvider } from './Components/Cart/CartContext';
 import { AuthProvider } from './Components/Login/AuthContext';
-import Login from './Components/Login/Login'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
+    <AuthProvider>
       <CartProvider>
-        <AuthProvider>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/readmore/:id" element={<ReadMore />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
-          <Route path="/readmore/:id" element={<ReadMore />} />
-        </Routes>
-          </BrowserRouter>
-          </AuthProvider>
-        </CartProvider>
-    </div>
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
 };
 
-export default App
+export default App;
